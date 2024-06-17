@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://lsrjbh2rtoes"]
+
+[ext_resource type="Script" path="res://Space_Shooter_Showcase/Scenes/laser.gd" id="1_np8cb"]
+[ext_resource type="Texture2D" uid="uid://bmsq8d31ig0fe" path="res://Space_Shooter_Showcase/PNG/Lasers/laserBlue01.png" id="1_psjbr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_60fxl"]
+radius = 5.0
+height = 54.0
+
+[node name="Laser" type="Area2D"]
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("1_np8cb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.998144, 0.996175)
+texture = ExtResource("1_psjbr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_60fxl")

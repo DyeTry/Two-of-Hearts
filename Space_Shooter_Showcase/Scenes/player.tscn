@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbpyr6i2ha5p7"]
+
+[ext_resource type="Script" path="res://Space_Shooter_Showcase/Scenes/player.gd" id="1_wayx1"]
+[ext_resource type="Texture2D" uid="uid://fe0nlrww71ht" path="res://Space_Shooter_Showcase/PNG/playerShip1_blue.png" id="1_wm0d3"]
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(1, 0.98724)
+collision_mask = 6
+script = ExtResource("1_wayx1")
+
+[node name="PlayerImage" type="Sprite2D" parent="."]
+texture = ExtResource("1_wm0d3")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-8, -37, 9, -37, 12, -12, 35, 2, 48, -6, 46, 25, 7, 37, -7, 38, -46, 23, -50, -4, -36, 1, -11, -12)
+
+[node name="LaserStartPos" type="Marker2D" parent="."]
+position = Vector2(0, -48.6204)
+scale = Vector2(10.0297, 75.6981)
+
+[node name="LaserTimer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+
+[connection signal="timeout" from="LaserTimer" to="." method="_on_laser_timer_timeout"]
