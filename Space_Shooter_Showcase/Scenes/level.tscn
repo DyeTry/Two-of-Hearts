@@ -133,7 +133,6 @@ collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/EastBorder"]
 position = Vector2(1234.59, 547.786)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_ty7cm")
 
 [node name="WestBorder" type="StaticBody2D" parent="Borders"]
@@ -142,7 +141,6 @@ collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/WestBorder"]
 position = Vector2(-34.5366, 857.097)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_xjmib")
 
 [node name="MeteorTimer" type="Timer" parent="."]

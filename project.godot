@@ -15,6 +15,10 @@ run/main_scene="res://Space_Shooter_Showcase/Scenes/level.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
+[autoload]
+
+Global_Space_Shooter="*res://Space_Shooter_Showcase/Global/global.gd"
+
 [display]
 
 window/size/viewport_width=1280

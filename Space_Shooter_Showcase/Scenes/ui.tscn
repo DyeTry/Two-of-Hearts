@@ -1,9 +1,10 @@
 [gd_scene load_steps=3 format=3 uid="uid://cyrywa55cv34t"]
 
 [ext_resource type="FontFile" uid="uid://b77ncxyq0o3iy" path="res://Space_Shooter_Showcase/Bonus/kenvector_future.ttf" id="1_611rd"]
-[ext_resource type="Texture2D" uid="uid://d180lmw14ywk8" path="res://Space_Shooter_Showcase/PNG/UI/playerLife1_blue.png" id="2_e64hq"]
+[ext_resource type="Script" path="res://Space_Shooter_Showcase/Scenes/ui.gd" id="1_g4da2"]
 
-[node name="UI" type="CanvasLayer"]
+[node name="UI" type="CanvasLayer" groups=["ui"]]
+script = ExtResource("1_g4da2")
 
 [node name="TitleContainer" type="MarginContainer" parent="."]
 anchors_preset = 5
@@ -26,33 +27,17 @@ text = "Space Shooters"
 anchors_preset = 2
 anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -40.0
-offset_right = 205.0
+offset_top = -35.0
+offset_right = 120.0
 grow_vertical = 0
-theme_override_constants/margin_left = 10
-theme_override_constants/margin_bottom = 10
+size_flags_horizontal = 0
 
 [node name="HBoxContainer" type="HBoxContainer" parent="HealthContainer"]
 layout_mode = 2
-size_flags_horizontal = 4
+size_flags_horizontal = 0
 theme_override_constants/separation = 10
 
-[node name="TextureRect" type="TextureRect" parent="HealthContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_e64hq")
+[node name="ScoreTimer" type="Timer" parent="."]
+autostart = true
 
-[node name="TextureRect2" type="TextureRect" parent="HealthContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_e64hq")
-
-[node name="TextureRect3" type="TextureRect" parent="HealthContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_e64hq")
-
-[node name="TextureRect4" type="TextureRect" parent="HealthContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_e64hq")
-
-[node name="TextureRect5" type="TextureRect" parent="HealthContainer/HBoxContainer"]
-layout_mode = 2
-texture = ExtResource("2_e64hq")
+[connection signal="timeout" from="ScoreTimer" to="." method="_on_score_timer_timeout"]
