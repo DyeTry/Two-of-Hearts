@@ -26,22 +26,21 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_irxuw"]
-size = Vector2(1283, 67)
+size = Vector2(2047.5, 67)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ty7cm"]
-size = Vector2(82.8961, 1307.53)
+size = Vector2(82.8961, 1875.51)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xjmib"]
-size = Vector2(77.8168, 1988.84)
+size = Vector2(77.8168, 2831.73)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_2eulh")
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(641, 353.125)
-scale = Vector2(5.40039, 3.00879)
+position = Vector2(966.375, 543.5)
+scale = Vector2(7.94238, 4.49609)
 texture = ExtResource("1_sg8bj")
-metadata/_edit_lock_ = true
 
 [node name="Stars" type="Node2D" parent="."]
 metadata/_edit_lock_ = true
@@ -117,14 +116,14 @@ metadata/_edit_lock_ = true
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/NorthBorder"]
-position = Vector2(639.5, -23.5)
+position = Vector2(967.5, -23.5)
 shape = SubResource("RectangleShape2D_irxuw")
 
 [node name="SouthBorder" type="StaticBody2D" parent="Borders"]
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/SouthBorder"]
-position = Vector2(646, 748)
+position = Vector2(964.25, 1099)
 shape = SubResource("RectangleShape2D_irxuw")
 
 [node name="EastBorder" type="StaticBody2D" parent="Borders"]
@@ -132,7 +131,7 @@ scale = Vector2(1.06945, 0.649889)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/EastBorder"]
-position = Vector2(1234.59, 547.786)
+position = Vector2(1812.15, 822.545)
 shape = SubResource("RectangleShape2D_ty7cm")
 
 [node name="WestBorder" type="StaticBody2D" parent="Borders"]
@@ -140,7 +139,7 @@ scale = Vector2(1.14371, 0.422356)
 collision_layer = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Borders/WestBorder"]
-position = Vector2(-34.5366, 857.097)
+position = Vector2(-34.5366, 1278.54)
 shape = SubResource("RectangleShape2D_xjmib")
 
 [node name="MeteorTimer" type="Timer" parent="."]

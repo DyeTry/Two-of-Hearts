@@ -14,6 +14,7 @@ config/name="Two_of_Hearts"
 run/main_scene="res://Space_Shooter_Showcase/Scenes/level.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+run/size/viewport_height=720
 
 [autoload]
 
