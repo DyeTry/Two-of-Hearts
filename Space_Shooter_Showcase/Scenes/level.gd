@@ -3,6 +3,7 @@ extends Node2D
 # 1. Load the scene
 var meteor_scene: PackedScene = load("res://Space_Shooter_Showcase/Scenes/meteor.tscn")
 var laser_scene: PackedScene = load("res://Space_Shooter_Showcase/Scenes/laser.tscn")
+var game_over_scene: PackedScene = load("res://Space_Shooter_Showcase/Scenes/game_over.tscn")
 
 var health: int = 3
 
@@ -43,7 +44,7 @@ func _on_meteor_collision():
 	health -= 1
 	get_tree().call_group("ui", "_set_health", health)
 	if health <= 0:
-		get_tree().change_scene_to_file("res://Space_Shooter_Showcase/Scenes/game_over.tscn")
+		get_tree().change_scene_to_packed(game_over_scene)
 
 func _on_player_laser(pos):
 	var laser = laser_scene.instantiate()

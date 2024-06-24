@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Two_of_Hearts"
-run/main_scene="res://Space_Shooter_Showcase/Scenes/level.tscn"
+run/main_scene="res://Two_of_Hearts/Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 run/size/viewport_height=720
